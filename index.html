@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mehrara - Home</title>
-    <link rel="shortcut icon" href={{ url_for('static', filename="logo.svg" )}} type="image/x-icon">
+    <link rel="shortcut icon" href=/static/logo.svg type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color: #9f7aea;">
         <div class="container-fluid">
-            <img src={{ url_for('static', filename="logo.svg" )}} alt="logo" class="img-fluid w-25" style="height: 7.5rem;">
+            <img src=/static/logo.svg alt="logo" class="img-fluid w-25" style="height: 7.5rem;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,18 +41,29 @@
                     class="bi-arrow-down-short"></span>
             </h1>
             <div class="row text-center g-4">
-                {% for id in ids %}
+                
                 <div class="col-md">
                     <div class="card bg-dark text-light">
                         <div class="card-body text-center">
-                            <img class="img-fluid mb-2" src={{ url_for('static', filename=desks[id].preview )}} alt={{desks[id].name}}>
-                            <h3 class="card-title mb-3">{{desks[id].name}}</h3>
-                            <p class="card-text">{{desks[id].price}} (Toman) - {{desks[id].color}}</p>
-                            <a class="btn btn-warning" href="/product/{{id}}">Images</a>
+                            <img class="img-fluid mb-2" src=/static/rseries61bk/rseries61bk-image1.jpg alt=R Series 61>
+                            <h3 class="card-title mb-3">R Series 61</h3>
+                            <p class="card-text">18.000.000 (Toman) - Black</p>
+                            <a class="btn btn-warning" href="/product/rseries61bk">Images</a>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <img class="img-fluid mb-2" src=/static/rseries88bk/rseries88bk-image1.jpg alt=R Series 88>
+                            <h3 class="card-title mb-3">R Series 88</h3>
+                            <p class="card-text">19.000.000 (Toman) - Black</p>
+                            <a class="btn btn-warning" href="/product/rseries88bk">Images</a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
